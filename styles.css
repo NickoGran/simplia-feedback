@@ -14,7 +14,7 @@ header {
 }
 
 .logo {
-  width: 300px;
+  width: 450px;
   max-width: 90%;
   height: auto;
 }
@@ -64,8 +64,8 @@ footer {
   background-color: #f1f1f1;
   color: #555;
   text-align: center;
-  padding: 10px 0; /* Espaciado interno reducido */
-  font-size: 1em;
+  padding: 5px 0; /* Espaciado interno reducido */
+  font-size: 0.9em;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -74,17 +74,22 @@ footer {
 
 .footer-content {
   display: flex;
-  flex-direction: column;
-  line-height: 1.2; /* Reducir el espacio entre líneas */
-  gap: 5px; /* Menor espacio entre elementos */
-  padding: 5px 0; /* Reducir el espacio superior e inferior */
+  flex-wrap: wrap; /* Permitir que el contenido pase a la siguiente línea si es necesario */
+  justify-content: center;
+  gap: 5px; /* Espaciado reducido entre elementos */
+  line-height: 1.1; /* Reducir el espaciado entre líneas */
+  padding: 0; /* Eliminar relleno adicional */
 }
 
-@media (min-width: 600px) {
+@media (max-width: 600px) {
+  footer {
+    padding: 3px 0; /* Espaciado aún más reducido en móviles */
+    font-size: 0.8em; /* Reducir el tamaño de fuente en móviles */
+  }
+
   .footer-content {
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    line-height: 1.5; /* Espaciado más grande para escritorio */
+    flex-direction: column; /* Forzar alineación vertical en móviles */
+    line-height: 1; /* Espaciado mínimo entre líneas */
+    gap: 3px; /* Espaciado mínimo entre elementos */
   }
 }
