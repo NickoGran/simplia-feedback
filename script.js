@@ -33,6 +33,14 @@ if (qrCode) {
       document.getElementById('sector').textContent = "Error";
       document.getElementById('descripcion').textContent = "Error";
     });
+
+    // Configurar el botón de feedback con el código QR
+    const feedbackButton = document.getElementById('feedbackButton');
+    feedbackButton.addEventListener('click', () => {
+      const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSckkFl8FsLORAUt7akTpNYIuuydf_H4zwgGHMz4qKcqVVOXiQ/viewform";
+      const prefillUrl = `${formUrl}?usp=pp_url&entry.297923331=${encodeURIComponent(qrCode)}`;
+      window.open(prefillUrl, '_blank');
+    });
 } else {
   console.error('Parámetro QR no encontrado en la URL.');
   document.getElementById('codigo').textContent = "No se proporcionó un código QR";
