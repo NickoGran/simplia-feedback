@@ -7,9 +7,11 @@ function getQueryParam(param) {
 // Obtener el valor del parámetro `qr`
 const qrCode = getQueryParam('qr');
 
+// URL base del Apps Script
+const appsScriptUrl = "https://script.google.com/macros/s/AKfycbzT34Pttb7vVyT46sMSCHPHYG9PRwk5GGEhbiS4HG8rqk6AFU2l4nvAGZJLU06kGA8VgQ/exec";
+
 if (qrCode) {
   console.log('Código QR recibido:', qrCode); // Depuración
-  const appsScriptUrl = "https://script.google.com/macros/s/AKfycbzT34Pttb7vVyT46sMSCHPHYG9PRwk5GGEhbiS4HG8rqk6AFU2l4nvAGZJLU06kGA8VgQ/exec";
 
   // Llamar al Apps Script con el parámetro `qr`
   fetch(`${appsScriptUrl}?qr=${encodeURIComponent(qrCode)}`)
