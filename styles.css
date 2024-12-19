@@ -14,7 +14,7 @@ header {
 }
 
 .logo {
-  width: 450px;
+  width: 600px;
   max-width: 90%;
   height: auto;
 }
@@ -76,7 +76,7 @@ footer {
   display: flex;
   flex-wrap: wrap; /* Permitir que el contenido pase a la siguiente línea si es necesario */
   justify-content: center;
-  gap: 5px; /* Espaciado reducido entre elementos */
+  gap: 3px; /* Espaciado reducido entre elementos */
   line-height: 1.1; /* Reducir el espaciado entre líneas */
   padding: 0; /* Eliminar relleno adicional */
 }
