@@ -77,7 +77,7 @@ footer {
   flex-wrap: wrap; /* Permitir que el contenido pase a la siguiente línea si es necesario */
   justify-content: center;
   gap: 3px; /* Espaciado reducido entre elementos */
-  line-height: 1; /* Reducir el espaciado entre líneas */
+  line-height: 0.7; /* Reducir el espaciado entre líneas */
   padding: 0; /* Eliminar relleno adicional */
 }
 
@@ -89,7 +89,7 @@ footer {
 
   .footer-content {
     flex-direction: column; /* Forzar alineación vertical en móviles */
-    line-height: 0.5; /* Espaciado mínimo entre líneas */
+    line-height: 0.4; /* Espaciado mínimo entre líneas */
     gap: 3px; /* Espaciado mínimo entre elementos */
   }
 }
