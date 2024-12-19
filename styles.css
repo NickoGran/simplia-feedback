@@ -15,11 +15,11 @@ header {
 }
 
 .logo {
-  width: auto; /* Ocupar todo el ancho disponible */
-  max-width: 400px; /* Asegurarse de que no exceda el contenedor */
+  width: auto;
+  max-width: 600px; 
   height: auto; /* Mantener proporción de la imagen */
   display: block; /* Centrar la imagen automáticamente */
-  margin: 0 auto; /* Eliminar márgenes */
+  margin: 0 auto; /* Centrado horizontal */
 }
 
 /* Ajustes específicos para móviles */
@@ -101,7 +101,7 @@ footer {
 
   .footer-content {
     flex-direction: column; /* Forzar alineación vertical en móviles */
-    line-height: 0.3; /* Espaciado mínimo entre líneas */
+    line-height: 0; /* Espaciado mínimo entre líneas */
     gap: 3px; /* Espaciado mínimo entre elementos */
   }
 }
