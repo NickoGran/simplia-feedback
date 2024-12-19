@@ -10,17 +10,21 @@ body {
 }
 
 header {
-  margin: 20px 0;
+  margin: 0; /* Elimina márgenes */
+  padding: 0; /* Elimina rellenos */
 }
 
 .logo {
-  width: 600px;
-  max-width: 100%;
-  height: auto;
+  width: 100%; /* Ocupar todo el ancho disponible */
+  max-width: 100%; /* Asegurarse de que no exceda el contenedor */
+  height: auto; /* Mantener proporción de la imagen */
+  display: block; /* Centrar la imagen automáticamente */
+  margin: 0; /* Eliminar márgenes */
 }
 
 main {
   flex: 1;
+  padding: 20px 0; /* Agregar algo de espacio superior/inferior */
 }
 
 h1 {
