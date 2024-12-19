@@ -4,6 +4,9 @@ function getQueryParam(param) {
     return urlParams.get(param);
   }
   
+  // Verifica si `qrCode` está siendo leído correctamente
+  console.log('Código QR recibido:', qrCode);
+
   const qrCode = getQueryParam('qr');
   const appsScriptUrl = "https://script.google.com/macros/s/AKfycbzT34Pttb7vVyT46sMSCHPHYG9PRwk5GGEhbiS4HG8rqk6AFU2l4nvAGZJLU06kGA8VgQ/exec";
   
