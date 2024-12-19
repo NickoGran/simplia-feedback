@@ -5,7 +5,7 @@ function getQueryParam(param) {
   }
   
   const qrCode = getQueryParam('qr');
-  const appsScriptUrl = "https://script.google.com/macros/s/AKfycbxdpt1bV6rqTgu3X0Xtpn3JC5R1mh53Nv913f5RxjsjFvO90TQ51hOdpFGcvsDqBXfD/exec";
+  const appsScriptUrl = "https://script.google.com/macros/s/1nrmZroIAtUVLQRA_1ZWBNjrcFjdA4nrqvfBybGJu9Jwb7mUbPu2uFyJn/exec";
   
   if (qrCode) {
     // Llamar al Apps Script con el parámetro `qr`
