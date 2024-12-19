@@ -40,7 +40,7 @@ if (qrCode) {
     const feedbackButton = document.getElementById('feedbackButton');
     feedbackButton.addEventListener('click', () => {
       const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSckkFl8FsLORAUt7akTpNYIuuydf_H4zwgGHMz4qKcqVVOXiQ/viewform";
-      const prefillUrl = `${formUrl}?usp=pp_url&entry.297923331=${encodeURIComponent(qrCode)}`;
+      const prefillUrl = `${formUrl}?usp=pp_url&entry.1173301414=${encodeURIComponent(qrCode)}`;
       window.open(prefillUrl, '_blank');
     });
 } else {
