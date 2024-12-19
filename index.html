@@ -1,28 +1,19 @@
-function doGet(e) {
-    var qrCode = e.parameter.qr || "No proporcionado";
-  
-    var spreadsheetId = "1xyjzRbX8kyv6TsrnPjOiiRRLeE8mvwMEQi4Wokl6m_s";
-    var sheet = SpreadsheetApp.openById(spreadsheetId).getSheetByName("BD Planes");
-    var data = sheet.getDataRange().getValues();
-  
-    var result = {
-      descripcion: "Descripción no encontrada",
-      cliente: "Cliente no encontrado",
-      sector: "Sector no encontrado"
-    };
-  
-    for (var i = 1; i < data.length; i++) {
-      if (data[i][0] === qrCode) {
-        result = {
-          descripcion: data[i][6], // Columna G
-          cliente: data[i][1],     // Columna B
-          sector: data[i][4]       // Columna E
-        };
-        break;
-      }
-    }
-  
-    return ContentService.createTextOutput(JSON.stringify(result))
-      .setMimeType(ContentService.MimeType.JSON);
-  }
-  
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Base de Datos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Consulta de Información</h1>
+  <div id="resultados">
+    <p><strong>Código:</strong> <span id="codigo">Cargando...</span></p>
+    <p><strong>Cliente:</strong> <span id="cliente">Cargando...</span></p>
+    <p><strong>Sector:</strong> <span id="sector">Cargando...</span></p>
+    <p><strong>Descripción:</strong> <span id="descripcion">Cargando...</span></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
