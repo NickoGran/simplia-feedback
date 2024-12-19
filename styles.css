@@ -15,11 +15,19 @@ header {
 }
 
 .logo {
-  width: 100%; /* Ocupar todo el ancho disponible */
-  max-width: 100%; /* Asegurarse de que no exceda el contenedor */
+  width: auto; /* Ocupar todo el ancho disponible */
+  max-width: 400px; /* Asegurarse de que no exceda el contenedor */
   height: auto; /* Mantener proporción de la imagen */
   display: block; /* Centrar la imagen automáticamente */
-  margin: 0; /* Eliminar márgenes */
+  margin: 0 auto; /* Eliminar márgenes */
+}
+
+/* Ajustes específicos para móviles */
+@media (max-width: 600px) {
+  .logo {
+    width: 100%; /* Ocupar todo el ancho en móviles */
+    max-width: 100%; /* Asegurarse de que no exceda el contenedor */
+  }
 }
 
 main {
